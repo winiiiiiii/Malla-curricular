@@ -1,1 +1,97 @@
+/* Estilos base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+header {
+    background: linear-gradient(135deg, #ff914d, #ffb347);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+#malla-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Tarjetas por semestre */
+.semestre {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.semestre h2 {
+    color: #ff7a00;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.ramo {
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    transition: all 0.2s;
+}
+
+.ramo:hover {
+    background-color: #ffe0c1;
+}
+
+.ramo.aprobado {
+    background-color: #b6e7a0;
+    text-decoration: line-through;
+    color: #666;
+}
+
+#mensaje-bloqueo {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff7a00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    padding: 15px 0;
+}
+
+/* Animación para mensajes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, 10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
 
